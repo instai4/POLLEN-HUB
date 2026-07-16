@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PollenLab </title>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cellipse cx='32' cy='38' rx='12' ry='16' fill='%23d4a853'/%3E%3Crect x='20' y='34' width='24' height='4' rx='2' fill='%231a1a1a' opacity='0.7'/%3E%3Crect x='20' y='42' width='24' height='4' rx='2' fill='%231a1a1a' opacity='0.7'/%3E%3Ccircle cx='32' cy='21' r='8' fill='%23d4a853'/%3E%3Cline x1='28' y1='14' x2='22' y2='6' stroke='%23d4a853' stroke-width='2' stroke-linecap='round'/%3E%3Ccircle cx='22' cy='6' r='2' fill='%23d4a853'/%3E%3Cline x1='36' y1='14' x2='42' y2='6' stroke='%23d4a853' stroke-width='2' stroke-linecap='round'/%3E%3Ccircle cx='42' cy='6' r='2' fill='%23d4a853'/%3E%3Cellipse cx='18' cy='28' rx='10' ry='6' fill='rgba(212%2C168%2C83%2C0.35)' transform='rotate(-20 18 28)'/%3E%3Cellipse cx='46' cy='28' rx='10' ry='6' fill='rgba(212%2C168%2C83%2C0.35)' transform='rotate(20 46 28)'/%3E%3Cellipse cx='16' cy='36' rx='7' ry='4' fill='rgba(212%2C168%2C83%2C0.2)' transform='rotate(-10 16 36)'/%3E%3Cellipse cx='48' cy='36' rx='7' ry='4' fill='rgba(212%2C168%2C83%2C0.2)' transform='rotate(10 48 36)'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <span class="logo-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 64 64" fill="currentColor"
+                    aria-hidden="true">
+                    <!-- Body -->
+                    <ellipse cx="32" cy="38" rx="12" ry="16" fill="#d4a853" />
+                    <!-- Stripes -->
+                    <rect x="20" y="34" width="24" height="4" rx="2" fill="#1a1a1a" opacity="0.7" />
+                    <rect x="20" y="42" width="24" height="4" rx="2" fill="#1a1a1a" opacity="0.7" />
+                    <!-- Head -->
+                    <circle cx="32" cy="21" r="8" fill="#d4a853" />
+                    <!-- Antennae -->
+                    <line x1="28" y1="14" x2="22" y2="6" stroke="#d4a853" stroke-width="2" stroke-linecap="round" />
+                    <circle cx="22" cy="6" r="2" fill="#d4a853" />
+                    <line x1="36" y1="14" x2="42" y2="6" stroke="#d4a853" stroke-width="2" stroke-linecap="round" />
+                    <circle cx="42" cy="6" r="2" fill="#d4a853" />
+                    <!-- Wings -->
+                    <ellipse cx="18" cy="28" rx="10" ry="6" fill="rgba(212,168,83,0.35)"
+                        transform="rotate(-20 18 28)" />
+                    <ellipse cx="46" cy="28" rx="10" ry="6" fill="rgba(212,168,83,0.35)" transform="rotate(20 46 28)" />
+                    <ellipse cx="16" cy="36" rx="7" ry="4" fill="rgba(212,168,83,0.2)" transform="rotate(-10 16 36)" />
+                    <ellipse cx="48" cy="36" rx="7" ry="4" fill="rgba(212,168,83,0.2)" transform="rotate(10 48 36)" />
+                </svg>
+            </span>
+            <span class="logo-text">PollenLab</span>
+        </a>
+        <nav class="nav">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#gallery" class="nav-link">Gallery</a>
+            <a href="#contact" class="nav-link">Join the Hive</a>
+        </nav>
+        <div class="header-controls">
+            <button class="audio-toggle" id="audio-toggle" aria-label="Toggle ambient sound">
+                <i class="fa-solid fa-volume-xmark"></i>
+            </button>
+            <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <button class="cta-button" onclick="window.open('https://instai4.github.io/PORT-FOLIO/', '_blank')">
+                <span>Portfolio</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </header>
+
+    <model-viewer src="bee_flying.glb" id="bee-model" camera-orbit="90deg 90deg" auto-rotate-delay="0"
+        interaction-prompt="none" touch-action="none" autoplay></model-viewer>
+
+    <section class="home" id="home">
+        <div class="hero-content">
+            <span class="hero-label reveal">Immersive 3D Experience</span>
+            <h1 class="hero-title reveal animation-delay-100">
+                <span class="title-line">Nature's Most</span>
+                <span class="title-line gold-text">Remarkable</span>
+                <span class="title-line">Creation</span>
+            </h1>
+            <p class="hero-description reveal animation-delay-200">
+                Discover the intricate beauty of pollinators through an award-winning
+                interactive 3D journey that celebrates the wonders of the natural world.
+            </p>
+            <div class="hero-buttons reveal animation-delay-300">
+                <button class="btn-primary">
+                    <span>Explore Now</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <button class="btn-secondary">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-content">
+            <div class="about-header">
+                <span class="section-label reveal">Discovery</span>
+                <h2 class="section-title reveal animation-delay-100">
+                    The Art of <span class="gold-text">Pollination</span>
+                </h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal animation-delay-200">
+                    <p class="lead-text">
+                        Bees are nature's master architects and essential guardians of our ecosystem,
+                        responsible for pollinating over 80% of flowering plants worldwide.
+                    </p>
+                    <p class="body-text">
+                        Their intricate dance language, remarkable navigation abilities, and tireless
+                        work ethic make them one of the most fascinating creatures on Earth. Each
+                        colony operates as a superorganism, with thousands of individuals working
+                        in perfect harmony.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">80%</span>
+                            <span class="stat-label">Plants Pollinated</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">20K+</span>
+                            <span class="stat-label">Species Worldwide</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5M</span>
+                            <span class="stat-label">Flowers Per Colony</span>
+                        </div>
+                    </div>
+                    <a href="#" class="link-button">
+                        <span>Discover More</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <div class="gallery-header">
+            <span class="section-label reveal">Collection</span>
+            <h2 class="section-title reveal animation-delay-100">
+                Visual <span class="gold-text">Gallery</span>
+            </h2>
+            <p class="section-description reveal animation-delay-200">
+                Explore our curated collection of stunning macro photography
+            </p>
+        </div>
+        <div class="gallery-content">
+            <div class="gallery-card reveal animation-delay-200">
+                <div class="card-inner">
+                    <div class="card-image">
+                        <img src="bee1.png" alt="Honeybee on flower">
+                    </div>
+                    <div class="card-overlay">
+                        <span class="card-title">Golden Harvest</span>
+                        <span class="card-subtitle">Macro Photography</span>
+                    </div>
+                </div>
+                <div class="card-accent"></div>
+            </div>
+            <div class="gallery-card interactive-3d-card reveal animation-delay-300">
+                <div class="card-inner">
+                    <div class="interactive-glow"></div>
+                    <div class="interactive-badge">
+                        <i class="fa-solid fa-cube"></i>
+                        <span>3D INTERACTIVE</span>
+                    </div>
+                    <div class="card-overlay">
+                        <span class="card-title">Interactive 3D Bee</span>
+                        <span class="card-subtitle">Drag to Rotate • Hover to Inspect</span>
+                    </div>
+                </div>
+                <div class="card-accent"></div>
+            </div>
+            <div class="gallery-card reveal animation-delay-400">
+                <div class="card-inner">
+                    <div class="card-image">
+                        <img src="bee3.png" alt="Bee collecting pollen">
+                    </div>
+                    <div class="card-overlay">
+                        <span class="card-title">Pollen Dance</span>
+                        <span class="card-subtitle">Wildlife Portrait</span>
+                    </div>
+                </div>
+                <div class="card-accent"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-copy reveal animation-delay-200">
+                <span class="section-label">Join the Hive</span>
+                <h2 class="section-title">
+                    Help <span class="gold-text">nature</span> thrive.
+                </h2>
+                <p class="section-description">
+                    Every flower needs a visitor, and every visitor deserves a place to be remembered.
+                    This experience celebrates the quiet power of pollinators and the living world they sustain.
+                </p>
+                <div class="contact-highlights">
+                    <div class="highlight-item">
+                        <i class="fa-solid fa-seedling"></i>
+                        <span>Pollination keeps ecosystems alive</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fa-solid fa-leaf"></i>
+                        <span>Bees shape the future of food and beauty</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>Small journeys create lasting impact</span>
+                    </div>
+                </div>
+                <a href="https://instai4.github.io/PORT-FOLIO/" target="_blank" class="btn-primary">
+                    <span>Discover the Creator</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="contact-card reveal animation-delay-300">
+                <div class="contact-card-inner">
+                    <p class="contact-card-label">Pollinator Note</p>
+                    <h3>“A single bee can carry the promise of a hundred blossoms.”</h3>
+                    <p>
+                        This page was designed to honor the elegance of movement, the wonder of nature,
+                        and the quiet rhythm that connects every living thing.
+                    </p>
+                    <div class="contact-pill">Immersive • Organic • Alive</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <span class="logo-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 64 64"
+                            fill="currentColor" aria-hidden="true">
+                            <ellipse cx="32" cy="38" rx="12" ry="16" fill="#d4a853" />
+                            <rect x="20" y="34" width="24" height="4" rx="2" fill="#1a1a1a" opacity="0.7" />
+                            <rect x="20" y="42" width="24" height="4" rx="2" fill="#1a1a1a" opacity="0.7" />
+                            <circle cx="32" cy="21" r="8" fill="#d4a853" />
+                            <line x1="28" y1="14" x2="22" y2="6" stroke="#d4a853" stroke-width="2"
+                                stroke-linecap="round" />
+                            <circle cx="22" cy="6" r="2" fill="#d4a853" />
+                            <line x1="36" y1="14" x2="42" y2="6" stroke="#d4a853" stroke-width="2"
+                                stroke-linecap="round" />
+                            <circle cx="42" cy="6" r="2" fill="#d4a853" />
+                            <ellipse cx="18" cy="28" rx="10" ry="6" fill="rgba(212,168,83,0.35)"
+                                transform="rotate(-20 18 28)" />
+                            <ellipse cx="46" cy="28" rx="10" ry="6" fill="rgba(212,168,83,0.35)"
+                                transform="rotate(20 46 28)" />
+                            <ellipse cx="16" cy="36" rx="7" ry="4" fill="rgba(212,168,83,0.2)"
+                                transform="rotate(-10 16 36)" />
+                            <ellipse cx="48" cy="36" rx="7" ry="4" fill="rgba(212,168,83,0.2)"
+                                transform="rotate(10 48 36)" />
+                        </svg>
+                    </span>
+                    <span class="logo-text">PollenLab</span>
+                </a>
+                <p class="footer-tagline">Crafting immersive digital experiences</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Join the Hive</a>
+                <a href="https://instai4.github.io/PORT-FOLIO/" target="_blank">Portfolio</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/instai4" target="_blank" class="social-link" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/instai4?igsh=YzVkODRmOTdmMw%3D%3D" target="_blank"
+                    class="social-link" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/anurag-singh-43230a380/" target="_blank" class="social-link"
+                    aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Anurag Singh | PollenLab. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script src="script.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</body>
+
+</html>
