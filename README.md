@@ -1,6 +1,6 @@
 # PollenLab
 
-A visually rich immersive landing page inspired by bees, pollination, and the beauty of nature. The experience combines 3D visuals, smooth scrolling, animated particles, and ambient audio to create a memorable interactive story
+A visually rich immersive landing page inspired by bees, pollination, and the beauty of nature. The experience combines 3D visuals, smooth scrolling, animated particles, and ambient audio to create a memorable interactive story.
 
 ## Overview
 
